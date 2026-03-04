@@ -1,10 +1,10 @@
-# University Students Mental Health Analysis
+# Analysis of Anxiety and Depression in University Students
 
 ## Project Overview
 
-This project analyzes the relationship between depression and anxiety in university students.
+This project explores the relationship between anxiety and depression in university students through data analysis.
 
-The objective is to identify patterns and risk groups using data analysis techniques.
+The main objective is to measure prevalence rates, compare groups by gender, and identify potential high-risk populations within the sample.
 
 ---
 
@@ -12,30 +12,32 @@ The objective is to identify patterns and risk groups using data analysis techni
 
 The dataset contains survey responses from university students.
 
-Each row represents one student.  
-The dataset includes the following variables:
+Each row represents an individual student and includes the following variables:
 
 - Gender
 - Depression (Yes/No)
 - Anxiety (Yes/No)
-- Sought professional treatment (Yes/No)
+- Sought Professional Treatment (Yes/No)
+
+The data was structured for analytical purposes and prepared for relational querying and visualization.
 
 ---
 
 ## Tools Used
 
-- Microsoft Excel (data cleaning and preparation)
-- SQL (data exploration and metrics calculation)
-- Power BI (data visualization and dashboard creation)
+- Microsoft Excel — Data cleaning and preprocessing  
+- SQL — Data exploration, filtering, and metric calculation  
+- Power BI — Data modeling and interactive dashboard visualization  
 
 ---
 
 ## Analytical Process
 
-1. Data cleaning and organization in Excel.
-2. Data exploration and metric calculation using SQL.
-3. Data modeling and visualization in Power BI.
-4. Interpretation of results to identify patterns.
+1. Cleaned and standardized categorical variables in Excel.
+2. Imported the dataset into SQL for exploratory analysis and prevalence calculations.
+3. Created queries to measure depression rates across gender and anxiety groups.
+4. Built an interactive Power BI dashboard to visualize key metrics and trends.
+5. Interpreted results to identify patterns and potential risk segments.
 
 ---
 
@@ -44,12 +46,12 @@ The dataset includes the following variables:
 - 34.65% of students in the sample present depression.
 - Students with anxiety show a significantly higher prevalence of depression.
 - Female students show a higher percentage of depression compared to male students.
-- The analysis identifies potential high-risk groups within the student population.
+- Students who sought professional treatment all belonged to the depression group (this does not imply causation).
 
 ---
 
 ## Conclusion
 
-The analysis shows a relevant relationship between anxiety and depression in university students.
+The analysis reveals a strong association between anxiety and depression among university students, with noticeable differences by gender.
 
-These findings can support better decision-making in university mental health programs and early intervention strategies.
+These findings highlight the importance of early detection strategies and targeted mental health support programs within academic institutions.
