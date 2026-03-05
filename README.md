@@ -55,3 +55,9 @@ The data was structured for analytical purposes and prepared for relational quer
 The analysis reveals a strong association between anxiety and depression among university students, with noticeable differences by gender.
 
 These findings highlight the importance of early detection strategies and targeted mental health support programs within academic institutions.
+
+---
+
+## Dashboard
+
+![Mental Health Dashboard](mental_health_dashboard.png)
