@@ -61,3 +61,17 @@ The data was structured for analytical purposes and prepared for relational quer
 The analysis reveals a strong association between anxiety and depression among university students, with noticeable differences by gender.
 
 These findings highlight the importance of early detection strategies and targeted mental health support programs within academic institutions.
+
+---
+
+---
+
+## Repository Files
+
+This repository contains the following files:
+
+- students_mental_health.csv → Dataset used for the analysis.
+- mental_health_dashboard.pbix → Power BI dashboard file.
+- dashboard.png → Screenshot of the final dashboard visualization.
+
+To explore the dashboard interactively, download the .pbix file and open it using Microsoft Power BI Desktop.
