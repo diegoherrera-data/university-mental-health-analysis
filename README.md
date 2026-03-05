@@ -1,4 +1,4 @@
-# Analysis of Anxiety and Depression in University Students
+# Mental Health Analysis in University Students
 
 ## Project Overview
 
@@ -56,6 +56,14 @@ The data was structured for analytical purposes and prepared for relational quer
 
 ---
 
+## Business Insight
+
+The analysis suggests that anxiety is a strong indicator associated with depression within the student population.
+
+Identifying students experiencing anxiety could help universities prioritize early mental health interventions and support programs.
+
+---
+
 ## Conclusion
 
 The analysis reveals a strong association between anxiety and depression among university students, with noticeable differences by gender.
@@ -70,6 +78,6 @@ This repository contains the following files:
 
 - students_mental_health.csv → Dataset used for the analysis.
 - mental_health_dashboard.pbix → Power BI dashboard file.
-- dashboard.png → Screenshot of the final dashboard visualization.
+- mental_health_dashboard.png → Screenshot of the final dashboard visualization.
 
 To explore the dashboard interactively, download the .pbix file and open it using Microsoft Power BI Desktop.
