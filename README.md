@@ -8,6 +8,12 @@ The main objective is to measure prevalence rates, compare groups by gender, and
 
 ---
 
+## Dashboard
+
+![Mental Health Dashboard](mental_health_dashboard.png)
+
+---
+
 ## Dataset Description
 
 The dataset contains survey responses from university students.
@@ -55,9 +61,3 @@ The data was structured for analytical purposes and prepared for relational quer
 The analysis reveals a strong association between anxiety and depression among university students, with noticeable differences by gender.
 
 These findings highlight the importance of early detection strategies and targeted mental health support programs within academic institutions.
-
----
-
-## Dashboard
-
-![Mental Health Dashboard](mental_health_dashboard.png)
