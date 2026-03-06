@@ -8,6 +8,16 @@ The main objective is to measure prevalence rates, compare groups by gender, and
 
 ---
 
+## Business Problem
+
+Universities are increasingly concerned about the mental health of their students.
+
+Understanding the relationship between anxiety and depression can help institutions identify vulnerable groups and design better mental health support programs.
+
+This project analyzes student survey data to explore these relationships and identify potential risk groups.
+
+---
+
 ## Dashboard
 
 ![Mental Health Dashboard](mental_health_dashboard.png)
@@ -34,6 +44,18 @@ The data was structured for analytical purposes and prepared for relational quer
 - Microsoft Excel — Data cleaning and preprocessing  
 - SQL — Data exploration, filtering, and metric calculation  
 - Power BI — Data modeling and interactive dashboard visualization  
+
+---
+
+## Data Preparation
+
+Before the analysis, the dataset was cleaned and standardized in Excel.
+
+The preparation process included:
+
+- Standardizing categorical variables (Yes / No)
+- Checking for missing values
+- Ensuring consistent formatting for SQL queries
 
 ---
 
