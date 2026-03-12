@@ -1,105 +1,83 @@
-# Mental Health Analysis in University Students
+# University Mental Health Analysis: Depression & Anxiety Patterns
 
 ## Project Overview
+This project explores the relationship between anxiety and depression in university students through data analysis. The main objective is to measure prevalence rates, compare groups by gender, and identify high-risk populations within a sample of **101 students**.
 
-This project explores the relationship between anxiety and depression in university students through data analysis.
-
-The main objective is to measure prevalence rates, compare groups by gender, and identify potential high-risk populations within the sample.
-
----
-
-## Business Problem
-
-Universities are increasingly concerned about the mental health of their students.
-
-Understanding the relationship between anxiety and depression can help institutions identify vulnerable groups and design better mental health support programs.
-
-This project analyzes student survey data to explore these relationships and identify potential risk groups.
+Understanding these correlations helps educational institutions identify vulnerable groups and design better mental health support programs.
 
 ---
 
-## Dashboard
-
-![Mental Health Dashboard](mental_health_dashboard.png)
+## Dashboard Preview
+![Mental Health Dashboard](mental_health_dashboard.png) 
+*Note: Ensure the file name in the repository matches exactly to display the image.*
 
 ---
 
-## Dataset Description
-
-The dataset contains survey responses from university students.
-
-Each row represents an individual student and includes the following variables:
-
-- Gender
-- Depression (Yes/No)
-- Anxiety (Yes/No)
-- Sought Professional Treatment (Yes/No)
-
-The data was structured for analytical purposes and prepared for relational querying and visualization.
+## Key Findings (Executive Summary)
+Based on the statistical analysis of the dataset:
+* **Prevalence:** The overall depression rate is **34.65%**, while anxiety prevalence stands at **33.7%**.
+* **Critical Correlation:** Students with anxiety show a depression rate of **0.53**, more than double the rate of those without anxiety (**0.25**).
+* **Gender Gap:** Female students report a higher depression rate (**0.39**) compared to male students (**0.23**).
+* **Professional Help:** Only **15.6%** of the students have sought professional treatment.
 
 ---
 
 ## Tools Used
-
-- Microsoft Excel — Data cleaning and preprocessing  
-- SQL — Data exploration, filtering, and metric calculation  
-- Power BI — Data modeling and interactive dashboard visualization  
-
----
-
-## Data Preparation
-
-Before the analysis, the dataset was cleaned and standardized in Excel.
-
-The preparation process included:
-
-- Standardizing categorical variables (Yes / No)
-- Checking for missing values
-- Ensuring consistent formatting for SQL queries
+- **Excel & Power Query:** Data cleaning, normalization, and categorical standardization.
+- **SQL:** Data exploration, relational filtering, and advanced metric calculation.
+- **Power BI:** Data modeling and interactive visualization.
 
 ---
 
 ## Analytical Process
 
-1. Cleaned and standardized categorical variables in Excel.
-2. Imported the dataset into SQL for exploratory analysis and prevalence calculations.
-3. Created queries to measure depression rates across gender and anxiety groups.
-4. Built an interactive Power BI dashboard to visualize key metrics and trends.
-5. Interpreted results to identify patterns and potential risk segments.
+### 🧹 1. Data Cleaning & Normalization (Power Query)
+- **Categorical Consistency:** Unified variations in the 'Year of Study' column (e.g., converting "year 1" to "Year 1") to ensure accurate grouping.
+- **Text Standardization:** Cleaned and standardized 'Course' names to prevent category fragmentation.
+- **Data Integrity:** Applied 'Trim' functions to remove trailing spaces and handled missing values to maintain a consistent sample of 101 records.
+
+### 2. Exploratory Data Analysis (EDA)
+- Used SQL to calculate prevalence rates and segment the population by gender and anxiety status to find correlations.
+
+### 3. Data Visualization
+- Developed an interactive Power BI dashboard using dynamic filters for **Gender** and **Anxiety Status** to highlight risk segments.
 
 ---
 
-## Key Findings
+## SQL Analysis
+I developed specific queries to extract mental health indicators and validate the co-occurrence of symptoms:
 
-- 34.65% of students in the sample present depression.
-- Students with anxiety show a significantly higher prevalence of depression.
-- Female students show a higher percentage of depression compared to male students.
-- Students who sought professional treatment all belonged to the depression group (this does not imply causation).
+```sql
+-- 1. Overall Depression Rate
+SELECT 
+    SUM(CASE WHEN Depression = 'Yes' THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS depression_rate
+FROM mental_health;
 
----
+-- 2. Depression Rate Segmented by Anxiety Status
+SELECT 
+    Anxiety,
+    COUNT(*) AS total_students,
+    SUM(CASE WHEN Depression = 'Yes' THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS depression_rate
+FROM mental_health
+GROUP BY Anxiety;
 
-## Business Insight
-
-The analysis suggests that anxiety is a strong indicator associated with depression within the student population.
-
-Identifying students experiencing anxiety could help universities prioritize early mental health interventions and support programs.
-
----
-
-## Conclusion
-
-The analysis reveals a strong association between anxiety and depression among university students, with noticeable differences by gender.
-
-These findings highlight the importance of early detection strategies and targeted mental health support programs within academic institutions.
-
----
-
-## Repository Files
-
-This repository contains the following files:
-
-- students_mental_health.csv → Dataset used for the analysis.
-- mental_health_dashboard.pbix → Power BI dashboard file.
-- mental_health_dashboard.png → Screenshot of the final dashboard visualization.
-
+-- 3. Mental Health Gender Gap Analysis
+SELECT 
+    Gender,
+    SUM(CASE WHEN Depression = 'Yes' THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS depression_rate
+FROM mental_health
+GROUP BY Gender
+ORDER BY depression_rate DESC;
 To explore the dashboard interactively, download the .pbix file and open it using Microsoft Power BI Desktop.
+
+---
+
+## 🚀 Conclusion & Business Insights
+The analysis reveals that **anxiety is a powerful predictor of depression** in the student population. Identifying students with high anxiety levels could allow universities to prioritize early mental health interventions. Furthermore, the identified gender gap suggests that support programs should be tailored to address the specific needs of different demographic groups.
+
+---
+
+## 📄 Repository Files
+- `student_mental_health_clean.csv`: Cleaned and standardized dataset used for the analysis.
+- `mental_health_dashboard.pbix`: Full Power BI project file.
+- `mental_health_dashboard.png`: High-resolution dashboard screenshot.
