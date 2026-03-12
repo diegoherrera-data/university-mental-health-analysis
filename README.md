@@ -69,7 +69,7 @@ FROM mental_health
 GROUP BY Gender
 ORDER BY depression_rate DESC;
 To explore the dashboard interactively, download the .pbix file and open it using Microsoft Power BI Desktop.
-
+```
 ---
 
 ## 🚀 Conclusion & Business Insights
