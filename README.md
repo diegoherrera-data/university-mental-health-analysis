@@ -68,7 +68,7 @@ ORDER BY depression_rate DESC;
 
 ---
 
-## 🚀 Institutional Insights & Recommendations
+## Institutional Insights & Recommendations
 
 1. **Early Intervention:** The analysis confirms that **anxiety is a powerful predictor of depression**. Universities should prioritize students reporting high anxiety for early psychological screening.
 2. **Tailored Support:** The identified **gender gap** suggests that mental health awareness campaigns should be tailored to address the specific stressors and help-seeking behaviors of different demographic groups.
@@ -77,12 +77,12 @@ ORDER BY depression_rate DESC;
 
 ---
 
-## 📁 Repository Files
+## Repository Files
 - `student_mental_health_clean.csv`: Cleaned and standardized dataset.
 - `mental_health_dashboard.pbix`: Full Power BI project file.
 - `mental_health_dashboard.png`: High-resolution dashboard preview.
 
 ---
 
-### 📝 Analyst's Note:
+### Analyst's Note:
 As a Psychology student and Data Analyst, this project represents my ability to apply **evidence-based decision-making** to human behavior. I focused on the "Anxiety-Depression" correlation to show how data can pinpoint exactly where resources are most needed.
